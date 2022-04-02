@@ -34,8 +34,6 @@ def read():
 
 
 class PS4Controller(object):
-    """Class representing the PS4 controller. Pretty straightforward functionality."""
-
     controller = None
     axis_data = None
     button_data = None
@@ -43,8 +41,6 @@ class PS4Controller(object):
     time.sleep(1.8)
 
     def init(self):
-        """Initialize the joystick components"""
-
         pygame.init()
         pygame.joystick.init()
         self.controller = pygame.joystick.Joystick(0)
@@ -54,7 +50,6 @@ class PS4Controller(object):
         global velocidade
         global direcao
         global check
-        """Listen for events to happen"""
 
         if not self.axis_data:
             self.axis_data = {}
